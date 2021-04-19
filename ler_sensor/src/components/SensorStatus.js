@@ -2,8 +2,10 @@ import React from 'react'
 
 import { useSubscription, useMqttState } from 'mqtt-react-hooks'
 
+import './SensorStatus.css'
+
 export default function SensorStatus() {
-    const { message } = useSubscription(['sensor01/test']);
+    const { message } = useSubscription(['sensor02/test']);
     const { connectionStatus } = useMqttState();
 
     return (
